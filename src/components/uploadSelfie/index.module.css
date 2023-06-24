@@ -1,332 +1,332 @@
 .container {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .buttonContainer {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  margin: auto 0;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin: auto 0;
 }
 
 .buttonContainer button {
-  outline: 0;
-  cursor: pointer;
-  border: 4px solid #f028b8;
-  border-radius: 12px;
-  width: 50%;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  flex-direction: column;
-  color: #f028b8;
-  font-family: Aeonik;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: capitalize;
-  letter-spacing: 0.04em;
-  background: white;
+    outline: 0;
+    cursor: pointer;
+    border: 4px solid #f028b8;
+    border-radius: 12px;
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    flex-direction: column;
+    color: #f028b8;
+    font-family: Aeonik;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.04em;
+    background: white;
 
-  @media only screen and (max-width: 768px) {
-  }
+    @media only screen and (max-width: 768px) {
+    }
 }
 
 .buttonContainer button img {
-  flex: 1;
-  width: 80px;
-  object-fit: contain;
-  height: auto;
-  margin: auto;
+    flex: 1;
+    width: 80px;
+    object-fit: contain;
+    height: auto;
+    margin: auto;
 }
 
 .info {
-  font-family: Aeonik;
-  font-size: 15px;
-  font-weight: 400;
-  color: rgb(94, 94, 94);
-  margin: 3vh 0;
+    font-family: Aeonik;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(94, 94, 94);
+    margin: 3vh 0;
 }
 
 .titleContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: max-content;
-  width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    width: inherit;
 }
 
 .modalTitle {
-  font-family: Aeonik;
-  font-size: 2.2em;
-  font-weight: 500;
+    font-family: Aeonik;
+    font-size: 2.2em;
+    font-weight: 500;
 }
 
 .close {
-  cursor: pointer;
-  user-select: none;
-  color: #f028b8;
-  font-family: Aeonik;
-  font-size: 30px;
-  font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    color: #f028b8;
+    font-family: Aeonik;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .videoContainer {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative;
 }
 
 .videoContainer video {
-  width: inherit;
+    width: inherit;
 }
 
 .captureContainer button {
-  width: 52px;
-  height: 52px;
-  outline: 0;
-  cursor: pointer;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: none;
-  background: #fff;
-  box-shadow: 0px 0px 2px 1px #f028b8;
-}
-
-.captureContainer {
-  display: flex;
-  justify-content: space-between;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-  transform: translateY(-50%);
-  padding: 0 30px;
-}
-
-.captureContainer svg {
-  width: 32px;
-  height: auto;
-}
-
-.captureContainer svg path {
-  fill: #f028b8;
-}
-
-.videoContainer canvas {
-  display: none;
-  width: inherit;
-  height: inherit;
-}
-
-.videoContainer img {
-  display: none;
-  width: inherit;
-  height: auto;
-}
-
-.uploadImage {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  min-height: 130px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin: auto 0;
-}
-
-.uploadImage img {
-  position: absolute;
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.uploadButton {
-  outline: 0;
-  cursor: pointer;
-  border: 4px solid #f028b8;
-  border-radius: 12px;
-  width: 50%;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  flex-direction: column;
-  color: #f028b8;
-  font-family: Aeonik;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: capitalize;
-  letter-spacing: 0.04em;
-  margin: auto;
-  background: white;
-}
-
-.uploadButton svg {
-  width: 76px;
-  height: auto;
-  margin: auto;
-}
-
-.backArrowContainer {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.backArrowContainer button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 16px;
-  min-width: 120px;
-  min-height: 50px;
-  border-radius: 8px;
-  outline: 0;
-  gap: 8px;
-  cursor: pointer;
-  border: none;
-  font-family: Aeonik;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  color: #f028b8;
-  background: white;
-  border: 2px solid #f028b8;
-}
-
-.backArrowContainer svg {
-  height: 20px;
-  width: auto;
-}
-
-.continue {
-  color: #fff !important;
-  background: #f028b8 !important;
-  justify-self: flex-end;
-}
-
-.continue svg path {
-  fill: #fff;
-}
-
-.errorMsg {
-  letter-spacing: 0.04em;
-  color: red;
-  font-family: Aeonik;
-  font-size: 18px;
-}
-
-.selfieContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /* width: 70%; */
-  height: 70%;
-  row-gap: 20px;
-}
-
-.selfieImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-.selfieImg img {
-  min-width: 100%;
-  min-height: 100%;
-  background: #f028b8;
-  border-radius: 20px;
-}
-
-.photoroomIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px;
-  background: rgb(16, 26, 101);
-  border-radius: 5px;
-  width: 44px;
-  height: 44px;
-}
-
-.watermark {
-  display: flex;
-  margin: auto;
-  gap: 12px;
-  color: rgb(16, 26, 101);
-}
-
-.watermark p {
-  font-family: Aeonik;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.watermark h4 {
-  font-family: Aeonik;
-  font-size: 28px;
-  font-weight: 600;
-}
-@media only screen and (min-height: 600px) and (min-width: 900px) {
-  .videoContainer {
+    width: 52px;
+    height: 52px;
+    outline: 0;
+    cursor: pointer;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    box-shadow: 0px 0px 2px 1px #f028b8;
+}
 
-  .videoContainer video {
-    width: 90%;
+.captureContainer {
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 0 30px;
+}
+
+.captureContainer svg {
+    width: 32px;
+    height: auto;
+}
+
+.captureContainer svg path {
+    fill: #f028b8;
+}
+
+.videoContainer canvas {
+    display: none;
+    width: inherit;
+    height: inherit;
+}
+
+.videoContainer img {
+    display: none;
+    width: inherit;
+    height: auto;
+}
+
+.uploadImage {
+    display: flex;
+    width: 100%;
     height: 100%;
-  }
+    min-height: 130px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+
+.uploadImage img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.uploadButton {
+    outline: 0;
+    cursor: pointer;
+    border: 4px solid #f028b8;
+    border-radius: 12px;
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    flex-direction: column;
+    color: #f028b8;
+    font-family: Aeonik;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.04em;
+    margin: auto;
+    background: white;
+}
+
+.uploadButton svg {
+    width: 76px;
+    height: auto;
+    margin: auto;
+}
+
+.backArrowContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.backArrowContainer button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    min-width: 120px;
+    min-height: 50px;
+    border-radius: 8px;
+    outline: 0;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    font-family: Aeonik;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: #f028b8;
+    background: white;
+    border: 2px solid #f028b8;
+}
+
+.backArrowContainer svg {
+    height: 20px;
+    width: auto;
+}
+
+.continue {
+    color: #fff !important;
+    background: #f028b8 !important;
+    justify-self: flex-end;
+}
+
+.continue svg path {
+    fill: #fff;
+}
+
+.errorMsg {
+    letter-spacing: 0.04em;
+    color: red;
+    font-family: Aeonik;
+    font-size: 18px;
+}
+
+.selfieContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* width: 70%; */
+    height: 70%;
+    row-gap: 20px;
+}
+
+.selfieImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.selfieImg img {
+    min-width: 100%;
+    min-height: 100%;
+    background: #f028b8;
+    border-radius: 20px;
+}
+
+.photoroomIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background: rgb(16, 26, 101);
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+}
+
+.watermark {
+    display: flex;
+    margin: auto;
+    gap: 12px;
+    color: rgb(16, 26, 101);
+}
+
+.watermark p {
+    font-family: Aeonik;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.watermark h4 {
+    font-family: Aeonik;
+    font-size: 28px;
+    font-weight: 600;
+}
+@media only screen and (min-height: 600px) and (min-width: 900px) {
+    .videoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .videoContainer video {
+        width: 90%;
+        height: 100%;
+    }
 }
 @media only screen and (max-width: 900px) {
-  .buttonContainer {
-    gap: 40px;
-  }
+    .buttonContainer {
+        gap: 40px;
+    }
 
-  .container {
-    justify-content: center;
-  }
+    .container {
+        justify-content: center;
+    }
 
-  .info {
-    font-size: 1em;
-  }
+    .info {
+        font-size: 1em;
+    }
 }
 @media only screen and (max-width: 425px) {
-  .buttonContainer {
-    gap: 10px;
-  }
+    .buttonContainer {
+        gap: 10px;
+    }
 
-  .selfieContainer {
-    height: auto;
-  }
-  .buttonContainer > button {
-    font-size: 14px;
-  }
+    .selfieContainer {
+        height: auto;
+    }
+    .buttonContainer > button {
+        font-size: 14px;
+    }
 
-  .buttonContainer button img {
-    width: 60px;
-  }
+    .buttonContainer button img {
+        width: 60px;
+    }
 
-  .selfieImg {
-    height: 320px;
-    width: 100%;
-  }
+    .selfieImg {
+        height: 320px;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 900px) and (orientation: landscape) {
-  .buttonContainer button {
-    height: 180px;
-  }
+    .buttonContainer button {
+        height: 180px;
+    }
 }

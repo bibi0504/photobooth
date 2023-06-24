@@ -1,428 +1,428 @@
 .section {
-  width: 100%;
-  height: 100vh;
-  padding: 50px 110px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background: #111a1c;
-  background-image: url("./../../assets/icons/pattern.svg");
-  background-size: cover;
-  overflow-y: auto;
-  box-sizing: border-box;
-  position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #111a1c;
+    background-image: url('./../../assets/icons/pattern.svg');
+    background-size: cover;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
 }
 
 cardTitle :global(.cls-1) {
-  fill: #f020b6;
+    fill: #f020b6;
 }
 
 .logo :global(.cls-1) {
-  fill: #f020b6;
+    fill: #f020b6;
 }
 
 .button {
-  width: 100%;
-  border-radius: 12px;
-  padding: 14px 24px;
-  font-family: "Aeonik";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #f1f1f1;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  outline: 0;
-  display: flex;
-  column-gap: 10px;
-  align-items: center;
-  text-align: start;
-  justify-content: space-between;
-  background: transparent;
-  border: 2px solid #8b8b8a;
-  margin-bottom: 20px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f1f1f1;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    outline: 0;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    text-align: start;
+    justify-content: space-between;
+    background: transparent;
+    border: 2px solid #8b8b8a;
+    margin-bottom: 20px;
 }
 
 .header {
-  min-width: calc(100%);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 50px;
+    min-width: calc(100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .button p {
-  color: #f020b6;
-  font-family: "Aeonik";
-  font-weight: bold;
-  font-size: 1.12em;
+    color: #f020b6;
+    font-family: 'Aeonik';
+    font-weight: bold;
+    font-size: 1.12em;
 }
 
 .continue {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 20px;
-  background: #f028b8;
-  border-radius: 8px;
-  outline: 0;
-  gap: 8px;
-  cursor: pointer;
-  border: none;
-  font-family: Aeonik;
-  font-weight: 500;
-  font-size: 0.94em;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    background: #f028b8;
+    border-radius: 8px;
+    outline: 0;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    font-family: Aeonik;
+    font-weight: 500;
+    font-size: 0.94em;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-top: auto;
 }
 
 .rect {
-  width: 45%;
-  height: 54%;
-  background: #f028b8;
-  border-radius: 180px;
-  position: absolute;
-  right: 7.56%;
-  top: 7.56%;
-  background-image: url(../../assets/icons/personIcon.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
+    width: 45%;
+    height: 54%;
+    background: #f028b8;
+    border-radius: 180px;
+    position: absolute;
+    right: 7.56%;
+    top: 7.56%;
+    background-image: url(../../assets/icons/personIcon.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .repositionedImageContainer {
-  position: absolute;
-  right: 7.56%;
-  top: 7.56%;
-  width: 45%;
-  height: 54%;
-  border-radius: 180px;
+    position: absolute;
+    right: 7.56%;
+    top: 7.56%;
+    width: 45%;
+    height: 54%;
+    border-radius: 180px;
 }
 
 .repositionedImage {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 180px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 180px;
 }
 .mainContainer {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex: 1;
-  width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
 }
 .mainContent {
-  display: flex;
-  align-self: flex-start;
-  column-gap: 92px;
-  row-gap: 30px;
+    display: flex;
+    align-self: flex-start;
+    column-gap: 92px;
+    row-gap: 30px;
 }
 
 .cardContainer {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .leftContainer {
-  flex: 1;
-  flex-direction: column;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rightContainer {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    color: white;
 }
 
 .subHead {
-  font-family: Aeonik;
-  font-weight: 400;
-  font-size: 3em;
-  line-height: 110%;
+    font-family: Aeonik;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 110%;
 }
 
 .selfieCard {
-  width: 600px;
-  height: 600px;
-  background: transparent;
-  position: relative;
-  display: flex;
+    width: 600px;
+    height: 600px;
+    background: transparent;
+    position: relative;
+    display: flex;
 }
 
 .selfieCard > div {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 6%;
-  background: #ffffff;
-  border: 2px solid #f020b6;
-  position: relative;
-  background-size: cover !important;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 6%;
+    background: #ffffff;
+    border: 2px solid #f020b6;
+    position: relative;
+    background-size: cover !important;
 }
 
 .patternBottom {
-  bottom: 0;
-  left: 0;
-  position: absolute;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .patternBottom svg {
-  width: 100%;
-  height: auto;
-  z-index: 0 !important;
+    width: 100%;
+    height: auto;
+    z-index: 0 !important;
 }
 
 .patternBottom svg path {
-  stroke: #96c6cc;
-  stroke-width: 2px;
+    stroke: #96c6cc;
+    stroke-width: 2px;
 }
 
 .cardTitle {
-  width: 184px;
-  height: auto;
-  position: absolute;
-  top: 10%;
-  left: 7.08%;
+    width: 184px;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 7.08%;
 }
 
 .cardTitle svg {
-  width: inherit !important;
-  height: auto !important;
+    width: inherit !important;
+    height: auto !important;
 }
 
 .footerText {
-  position: absolute;
-  bottom: 4.37%;
-  right: 4.7%;
-  color: black;
-  text-align: right;
-  font-family: Aeonik;
-  font-weight: 500;
-  font-size: 1em;
-  line-height: 110%;
+    position: absolute;
+    bottom: 4.37%;
+    right: 4.7%;
+    color: black;
+    text-align: right;
+    font-family: Aeonik;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 110%;
 }
 
 .selfieCard :global(.logo) {
-  width: 9.68vw;
-  position: absolute;
-  top: 6.97%;
-  left: 7.08%;
+    width: 9.68vw;
+    position: absolute;
+    top: 6.97%;
+    left: 7.08%;
 }
 
 .sticker {
-  height: 28.6%;
-  /* height: 150px; */
-  width: auto;
-  z-index: 1;
+    height: 28.6%;
+    /* height: 150px; */
+    width: auto;
+    z-index: 1;
 }
 .sticker path {
-  fill: black;
+    fill: black;
 }
 
 .persona {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f020b6;
-  border-radius: 50px;
-  font-family: "Aeonik";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  z-index: 1;
-  margin-bottom: 4.4%;
-  /* margin-bottom: 23px; */
-  /* padding: 8px 22px; */
-  padding: 1.5% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f020b6;
+    border-radius: 50px;
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 1;
+    margin-bottom: 4.4%;
+    /* margin-bottom: 23px; */
+    /* padding: 8px 22px; */
+    padding: 1.5% 4%;
 }
 
 .sticker:global(.black) path {
-  fill: #fff;
+    fill: #fff;
 }
 
 .desc {
-  font-family: Aeonik;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  margin-top: 24px;
-  margin-bottom: 20px;
+    font-family: Aeonik;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-top: 24px;
+    margin-bottom: 20px;
 }
 
 .pattern path {
-  stroke: #96c6cc;
-  stroke-width: 2px;
+    stroke: #96c6cc;
+    stroke-width: 2px;
 }
 
 .pattern svg {
-  width: fill-available;
-  height: auto;
+    width: fill-available;
+    height: auto;
 }
 
 .pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .pattern:global(.bottom) {
-  bottom: 0;
-  top: auto;
-  z-index: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 0;
 }
 
 .modalContent {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 36px 48px;
-  font-family: Aeonik;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 48px;
+    font-family: Aeonik;
 
-  @media only screen and (max-width: 900px) and (orientation: portrait) {
-    padding: 10px;
-  }
+    @media only screen and (max-width: 900px) and (orientation: portrait) {
+        padding: 10px;
+    }
 }
 
 .titleContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: max-content;
-  width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    width: inherit;
 }
 
 .modalTitle {
-  font-family: Aeonik;
-  font-size: 2.2em;
-  font-weight: 500;
+    font-family: Aeonik;
+    font-size: 2.2em;
+    font-weight: 500;
 }
 
 .close {
-  cursor: pointer;
-  user-select: none;
-  color: #f028b8;
-  font-family: Aeonik;
-  font-size: 30px;
-  font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    color: #f028b8;
+    font-family: Aeonik;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 1250px) {
-  .mainContent {
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: flex-start;
-    width: 100%;
-  }
+    .mainContent {
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 900px) {
-  .selfieCard {
-    width: 500px;
-    height: 500px;
-  }
-  .section {
-    padding: 40px;
-  }
+    .selfieCard {
+        width: 500px;
+        height: 500px;
+    }
+    .section {
+        padding: 40px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .selfieCard {
-    width: 400px;
-    height: 400px;
-  }
-  .rect,
-  .repositionedImageContainer {
-    border-radius: 120px;
-  }
-  .section {
-    padding: 20px 40px;
-  }
-  .cardTitle {
-    width: 121px;
-  }
-  .persona {
-    font-size: 9px;
-  }
-  .footerText {
-    font-size: 9px;
-  }
+    .selfieCard {
+        width: 400px;
+        height: 400px;
+    }
+    .rect,
+    .repositionedImageContainer {
+        border-radius: 120px;
+    }
+    .section {
+        padding: 20px 40px;
+    }
+    .cardTitle {
+        width: 121px;
+    }
+    .persona {
+        font-size: 9px;
+    }
+    .footerText {
+        font-size: 9px;
+    }
 }
 
 @media screen and (max-width: 560px) {
-  .selfieCard {
-    width: 300px;
-    height: 300px;
-  }
-  .rect,
-  .repositionedImageContainer {
-    border-radius: 91px;
-  }
-  .section {
-    padding: 15px 20px;
-  }
-  .cardTitle {
-    width: 90px;
-  }
-  .persona {
-    font-size: 7px;
-    line-height: 1.5;
-    margin-bottom: 4.4%;
-  }
-  .sticker {
-    height: 26.6%;
-  }
-  .footerText {
-    font-size: 8px;
-  }
-  .rightContainer {
-    margin-bottom: 40px;
-  }
+    .selfieCard {
+        width: 300px;
+        height: 300px;
+    }
+    .rect,
+    .repositionedImageContainer {
+        border-radius: 91px;
+    }
+    .section {
+        padding: 15px 20px;
+    }
+    .cardTitle {
+        width: 90px;
+    }
+    .persona {
+        font-size: 7px;
+        line-height: 1.5;
+        margin-bottom: 4.4%;
+    }
+    .sticker {
+        height: 26.6%;
+    }
+    .footerText {
+        font-size: 8px;
+    }
+    .rightContainer {
+        margin-bottom: 40px;
+    }
 }
 @media screen and (max-width: 382px) {
-  .selfieCard {
-    width: 250px;
-    height: 250px;
-  }
-  .section {
-    padding: 15px 20px;
-  }
-  .cardTitle {
-    width: 75px;
-  }
-  .persona {
-    font-size: 5px;
-    margin-bottom: 4.4%;
-    line-height: 1;
-    padding: 5px;
-  }
-  .sticker {
-    height: 24.5%;
-  }
-  .footerText {
-    font-size: 6px;
-  }
+    .selfieCard {
+        width: 250px;
+        height: 250px;
+    }
+    .section {
+        padding: 15px 20px;
+    }
+    .cardTitle {
+        width: 75px;
+    }
+    .persona {
+        font-size: 5px;
+        margin-bottom: 4.4%;
+        line-height: 1;
+        padding: 5px;
+    }
+    .sticker {
+        height: 24.5%;
+    }
+    .footerText {
+        font-size: 6px;
+    }
 }
