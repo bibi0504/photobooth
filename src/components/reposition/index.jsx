@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 import {
     LeftArrow,
     LeftArrowIcon,
@@ -10,15 +10,15 @@ import {
     RightArrowIcon,
     RotateLeftIcon,
     RotateRightIcon,
-} from '../../assets/icons';
-import styles from './index.module.css';
-import AvatarEditor from 'react-avatar-editor';
+} from "../../assets/icons";
+import styles from "./index.module.css";
+import AvatarEditor from "react-avatar-editor";
 
 export default function Reposition({ outputImg, callBack, fileName }) {
     const [zoomValue, setZoomValue] = useState(1);
     const [rotateValue, setRotateValue] = useState(0);
     const [imgPosition, setImagePosition] = useState({ x: 0.5, y: 0.5 });
-    const [imgString, setImgString] = useState('');
+    const [imgString, setImgString] = useState("");
     const editorRef = useRef(null);
 
     const handleZoomIn = () => {
@@ -94,12 +94,11 @@ export default function Reposition({ outputImg, callBack, fileName }) {
     };
 
     const loadImage = (url) =>
-        fetch(url, { headers: { 'Access-Control-Allow-Origin': '*' } })
+        fetch(url, { headers: { "Access-Control-Allow-Origin": "*" } })
             .then((response) => response.blob())
             .then(
                 (blob) =>
                     new Promise((resolve, reject) => {
-                        console.log(blob);
                         const reader = new FileReader();
                         reader.onloadend = () => resolve(reader.result);
                         reader.onerror = reject;
@@ -124,10 +123,11 @@ export default function Reposition({ outputImg, callBack, fileName }) {
                     <div className={styles.avatarContainer}>
                         <AvatarEditor
                             ref={editorRef}
-                            image={outputImg || ''}
+                            image={outputImg || ""}
                             className={styles.avatar}
-                            crossOrigin="*"
+                            crossOrigin='*'
                             border={0}
+                            borderRadius={146}
                             scale={zoomValue}
                             rotate={rotateValue}
                             position={imgPosition}
@@ -141,23 +141,17 @@ export default function Reposition({ outputImg, callBack, fileName }) {
                     <div className={styles.positionButton}>
                         <div
                             style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                                marginBottom: '20px',
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "center",
+                                marginBottom: "20px",
                             }}
                         >
                             <div className={styles.arrowBackground} onClick={handleUpButton}>
                                 <PositionUpArrow />
                             </div>
                         </div>
-                        <div
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                            }}
-                        >
+                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
                             <div className={styles.arrowBackground} onClick={handleLeftButton}>
                                 <LeftArrow />
                             </div>
@@ -171,33 +165,33 @@ export default function Reposition({ outputImg, callBack, fileName }) {
                     </div>
                     <div className={styles.transitionButton}>
                         <div className={styles.sliderContainer}>
-                            <MinusIcon onClick={handleZoomOut} style={{ cursor: 'pointer' }} />
+                            <MinusIcon onClick={handleZoomOut} style={{ cursor: "pointer" }} />
                             <input
-                                type="range"
-                                min="1"
-                                max="2"
+                                type='range'
+                                min='1'
+                                max='2'
                                 className={styles.slider}
-                                id="zoom"
+                                id='zoom'
                                 step={0.1}
                                 value={zoomValue}
                                 onChange={(e) => setZoomValue(e.target.valueAsNumber)}
                             />
-                            <PlusIcon onClick={handleZoomIn} style={{ cursor: 'pointer' }} />
+                            <PlusIcon onClick={handleZoomIn} style={{ cursor: "pointer" }} />
                         </div>
                         <div className={styles.sliderContainer}>
-                            <RotateLeftIcon onClick={handleRotateLeft} style={{ cursor: 'pointer' }} />
+                            <RotateLeftIcon onClick={handleRotateLeft} style={{ cursor: "pointer" }} />
                             <input
-                                type="range"
-                                min="-180"
-                                max="180"
+                                type='range'
+                                min='-180'
+                                max='180'
                                 className={styles.slider}
-                                id="rotate"
+                                id='rotate'
                                 value={rotateValue}
                                 onChange={(e) => {
                                     setRotateValue(e.target.valueAsNumber);
                                 }}
                             />
-                            <RotateRightIcon onClick={handleRotateRight} style={{ cursor: 'pointer' }} />
+                            <RotateRightIcon onClick={handleRotateRight} style={{ cursor: "pointer" }} />
                         </div>
                     </div>
                 </div>

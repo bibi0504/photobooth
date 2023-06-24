@@ -1,194 +1,194 @@
 .mainContainer {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('./../../assets/icons/pattern.svg');
-    overflow-y: auto;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./../../assets/icons/pattern.svg");
+  overflow-y: auto;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 50px;
-    width: 100%;
-    margin: 0px 60px;
-    padding: 50px;
-    width: 100%;
-    align-items: stretch;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  width: 100%;
+  margin: 0px 60px;
+  padding: 50px;
+  width: 100%;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .headerContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
 }
 
 .logo {
-    width: 250px;
-    object-fit: contain;
+  width: 250px;
+  object-fit: contain;
 }
 
 .bodyContainer {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-bottom: 60px;
 }
 
 .bodyContent {
-    display: flex;
-    gap: 50px;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  gap: 50px;
+  flex-direction: row;
+  width: 100%;
 }
 
 .leftContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 600px;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 600px;
+  flex: 1;
 }
 
 .rightContainer {
-    min-width: max-content;
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
 .imageStyle {
-    width: 600px;
-    height: 100%;
-    object-fit: contain;
+  width: 600px;
+  height: 100%;
+  object-fit: contain;
 }
 
 .icon {
-    width: 83.23px;
-    height: 83.23px;
-    margin-left: -12px;
+  width: 83.23px;
+  height: 83.23px;
+  margin-left: -12px;
 }
 
 .heading {
-    font-family: 'Gestura Display';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 96px;
-    line-height: 1;
-    color: white;
+  font-family: "Gestura Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1;
+  color: white;
 }
 
 .info {
-    font-family: 'Aeonik';
-    font-style: normal;
-    font-weight: 300;
-    line-height: 130%;
-    color: #cfd1d2;
-    letter-spacing: 0.01em;
-    margin-top: 40px;
-    font-size: 21px;
+  font-family: "Aeonik";
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%;
+  color: #cfd1d2;
+  letter-spacing: 0.01em;
+  margin-top: 40px;
+  font-size: 21px;
 }
 
 .info span {
-    font-weight: bold;
-    color: #fff;
+  font-weight: bold;
+  color: #fff;
 }
 
 .begin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px 20px;
-    width: 140px;
-    height: 50px;
-    background: #f028b8;
-    border-radius: 8px;
-    outline: 0;
-    gap: 8px;
-    cursor: pointer;
-    border: none;
-    font-family: 'Aeonik';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 20px;
+  width: 140px;
+  height: 50px;
+  background: #f028b8;
+  border-radius: 8px;
+  outline: 0;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  font-family: "Aeonik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-top: 30px;
 }
 
 .imgCard {
-    width: 640px;
-    height: max-content;
-    align-self: flex-end;
+  width: 640px;
+  height: max-content;
+  align-self: flex-end;
 }
 
 .imgCard img {
-    width: 100%;
+  width: 100%;
 }
 
 .divider {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 1200px) {
-    .bodyContent {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
+  .bodyContent {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .imageStyle {
-        width: 500px;
-        height: 100%;
-    }
+  .imageStyle {
+    width: 500px;
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .heading {
-        font-size: 60px;
-    }
-    .info {
-        font-size: 17px;
-    }
-    .container {
-        margin: 10px;
-        padding: 10px 30px;
-    }
+  .heading {
+    font-size: 60px;
+  }
+  .info {
+    font-size: 17px;
+  }
+  .container {
+    margin: 10px;
+    padding: 10px 30px;
+  }
 }
 
 @media screen and (max-width: 560px) {
-    .imageStyle {
-        width: 300px;
-        height: 100%;
-    }
-    .heading {
-        font-size: 40px;
-    }
-    .info {
-        font-size: 14px;
-    }
-    .container {
-        margin: 5px;
-        padding: 10px 15px;
-    }
+  .imageStyle {
+    width: 300px;
+    height: 100%;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .info {
+    font-size: 14px;
+  }
+  .container {
+    margin: 5px;
+    padding: 10px 15px;
+  }
 }
 @media screen and (max-width: 382px) {
-    .imageStyle {
-        width: 224px;
-        height: 100%;
-    }
+  .imageStyle {
+    width: 224px;
+    height: 100%;
+  }
 }

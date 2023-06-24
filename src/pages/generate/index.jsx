@@ -1,28 +1,32 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import styles from './index.module.css';
-import { LogoWhite, RightArrowIcon, CrossIcon } from '../../assets/icons';
-import Modal from '../../components/modal';
-import UploadSelfie from '../../components/uploadSelfie';
-import PickPersona from '../../components/pickPersona';
-import Reposition from '../../components/reposition';
-import PickColor from '../../components/pickColor';
-import Spinner from '../../components/spinner';
-import Share from '../../components/share';
-import html2canvas from 'html2canvas';
-import { axiosInstance } from '../../config/api';
-import { toast } from 'react-toastify';
-import Compressor from 'compressorjs';
-import Recent from '../../components/recentGrid';
-import Header from '../../components/header';
-import MainCard from '../../components/mainCard';
+import styles from "./index.module.css";
+import { LogoWhite, RightArrowIcon, Pattern2, Pattern3, CrossIcon } from "../../assets/icons";
+import Modal from "../../components/modal";
+import UploadSelfie from "../../components/uploadSelfie";
+import PickPersona from "../../components/pickPersona";
+import Reposition from "../../components/reposition";
+import PickColor from "../../components/pickColor";
+import Spinner from "../../components/spinner";
+import Share from "../../components/share";
+import { toBlob, toPng } from "html-to-image";
+import { axiosInstance } from "../../config/api";
+import { toast } from "react-toastify";
+import Compressor from "compressorjs";
+import Recent from "../../components/recentGrid";
+import Header from "../../components/header";
+import MainCard from "../../components/mainCard";
+
+const defaultColor = { color: "#f028b8", isBlack: false };
+const defaultImage = null;
+const defaultPersona = { persona: "Impactful Innovator", subText: "De-risky business" };
 
 export default function Generate() {
     const [modalOpen, setModalOpen] = useState(false);
     const [step, changeStep] = useState(1);
-    const [repositionedImage, setRepositionedImage] = useState();
-    const [persona, setPersona] = useState({});
-    const [color, setColor] = useState({});
+    const [repositionedImage, setRepositionedImage] = useState(defaultImage);
+    const [persona, setPersona] = useState(defaultPersona);
+    const [color, setColor] = useState(defaultColor);
     const [imgData, setImage] = useState({});
     const [isDownload, setIsDownload] = useState(false);
     const [finalImage, setFinalImage] = useState(null);
@@ -65,7 +69,7 @@ export default function Generate() {
 
     const handleFetchRecent = () => {
         axiosInstance
-            .get('getAllImages')
+            .get("getAllImages")
             .then((res) => {
                 if (res.status === 200 && res.data) {
                     setRecent(res.data.resultImages);
@@ -77,13 +81,15 @@ export default function Generate() {
     };
 
     const handleUploadFinal = (file) => {
+        console.log("here");
+
         setShowSpinner(true);
         const formData = new FormData();
-        formData.append('image_file', file);
-        formData.append('id', imgData.id);
-        formData.append('imageKey', imgData.imageKey);
+        formData.append("image_file", file);
+        formData.append("id", imgData.id);
+        formData.append("imageKey", imgData.imageKey);
         axiosInstance
-            .post('uploadFinalImage', formData)
+            .post("uploadFinalImage", formData)
             .then((res) => {
                 if (res.status === 200 && res.data) {
                     setFinalImage(res.data);
@@ -92,7 +98,7 @@ export default function Generate() {
             })
             .catch((err) => {
                 console.log(err);
-                toast.error('Something went wrong!');
+                toast.error("Something went wrong!");
             })
             .finally(() => {
                 setShowSpinner(false);
@@ -101,17 +107,15 @@ export default function Generate() {
     };
 
     const handleDownload = () => {
-        html2canvas(cardRef.current, {
-            backgroundColor: 'transparent',
-            windowWidth: 1920,
-            windowHeight: 1080,
+        toPng(cardRef.current, {
+            backgroundColor: "transparent",
         })
-            .then((canvas) => {
-                const imageData = canvas.toDataURL('image/png');
+            .then((image) => {
+                const imageData = image;
 
-                const a = document.createElement('a');
+                const a = document.createElement("a");
                 a.href = imageData;
-                a.download = 'Image.png';
+                a.download = "Image.png";
                 a.click();
             })
             .catch((ex) => {
@@ -120,23 +124,12 @@ export default function Generate() {
     };
 
     const getImage = () => {
-        html2canvas(cardRef.current, {
-            backgroundColor: 'transparent',
-            windowWidth: 1920,
-            windowHeight: 1080,
+        toBlob(cardRef.current, {
+            backgroundColor: "transparent",
         })
-            .then((canvas) => {
-                const imageData = canvas.toDataURL('image/png');
-                // console.log(imageData)
-                const arr = imageData.split(','),
-                    mime = arr[0].match(/:(.*?);/)[1],
-                    bstr = atob(arr[arr.length - 1]);
-                let n = bstr.length;
-                const u8arr = new Uint8Array(n);
-                while (n--) {
-                    u8arr[n] = bstr.charCodeAt(n);
-                }
-                const file = new File([u8arr], imgData.fileName, { type: mime });
+            .then((image) => {
+                const imageData = image;
+                const file = new File([imageData], imgData.fileName, { type: 'image/png' });
                 compressImage(file);
             })
             .catch((ex) => {
@@ -157,9 +150,9 @@ export default function Generate() {
     const handleClearStep = () => {
         changeStep(1);
         setRepositionedImage(null);
-        setColor({});
+        setColor(defaultColor);
         setImage({});
-        setPersona({});
+        setPersona(defaultPersona);
         setIsDownload(false);
         setRecent([]);
     };
@@ -170,6 +163,8 @@ export default function Generate() {
         }
     }, [color]);
 
+    console.log(color, repositionedImage, persona);
+
     return (
         <>
             <section className={styles.section}>
@@ -177,14 +172,16 @@ export default function Generate() {
                 <div className={styles.mainContainer}>
                     <div className={styles.mainContent}>
                         <div className={styles.leftContainer}>
-                            <div className={styles.selfieCard} ref={cardRef}></div>
+                            <div className={styles.selfieCard} ref={cardRef}>
+                                <MainCard color={color} persona={persona} img={repositionedImage} />
+                            </div>
                         </div>
                         {isDownload ? (
                             <div className={styles.rightContainer}>
                                 <Share
                                     handleDownload={handleDownload}
                                     handleCreateAnother={handleClearStep}
-                                    imgKey={finalImage ? imgData.imageKey : ''}
+                                    imgKey={finalImage ? imgData.imageKey : ""}
                                 />
                             </div>
                         ) : (
@@ -196,16 +193,16 @@ export default function Generate() {
                                 <p className={styles.desc}>
                                     Start with a photo then follow the steps below to personalize your meme.
                                 </p>
-                                <button className={styles.button} type="button" disabled={true}>
+                                <button className={styles.button} type='button' disabled={true}>
                                     Upload a selfie<p>1</p>
                                 </button>
-                                <button className={styles.button} type="button" disabled={true}>
+                                <button className={styles.button} type='button' disabled={true}>
                                     Reposition photo<p>2</p>
                                 </button>
-                                <button className={styles.button} type="button" disabled={true}>
+                                <button className={styles.button} type='button' disabled={true}>
                                     Pick your persona & fun statement<p>3</p>
                                 </button>
-                                <button className={styles.button} type="button" disabled={true}>
+                                <button className={styles.button} type='button' disabled={true}>
                                     Choose your colors<p>4</p>
                                 </button>
                                 <button className={styles.continue} onClick={handleChangeStep}>
@@ -215,21 +212,21 @@ export default function Generate() {
                         )}
                     </div>
                 </div>
-                {showSpinner ? <Spinner /> : ''}
+                {showSpinner ? <Spinner /> : ""}
                 <Recent images={recent?.slice(1)} />
             </section>
             <Modal open={modalOpen} onClose={handleModalClose}>
                 <div className={styles.modalContent}>
                     {step === 1 ? (
-                        ''
+                        ""
                     ) : (
                         <div className={styles.titleContainer}>
                             <p className={styles.modalTitle}>
                                 {step === 2
-                                    ? 'Position your selfie'
+                                    ? "Position your selfie"
                                     : step === 3
-                                    ? 'Pick your persona'
-                                    : 'Select a color'}
+                                    ? "Pick your persona"
+                                    : "Select a color"}
                             </p>
                             <p className={styles.close} onClick={handleModalClose}>
                                 <CrossIcon />
@@ -248,7 +245,7 @@ export default function Generate() {
                     ) : step === 2 ? (
                         <Reposition
                             outputImg={imgData.outputImageURL}
-                            fileName={imgData.fileName || ''}
+                            fileName={imgData.fileName || ""}
                             callBack={handleReposition}
                         />
                     ) : step === 4 ? (
@@ -260,7 +257,7 @@ export default function Generate() {
                             }}
                         />
                     ) : (
-                        ''
+                        ""
                     )}
                 </div>
             </Modal>

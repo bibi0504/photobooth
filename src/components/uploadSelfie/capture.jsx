@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import { CameraIcon, RetakeIcon, TickMarkIcon } from '../../assets/icons';
-import styles from './index.module.css';
+import { CameraIcon, RetakeIcon, TickMarkIcon } from "../../assets/icons";
+import styles from "./index.module.css";
 
 export default function CaptureSelfie({ handleSetImg }) {
-    const [imgSrc, setImgSrc] = useState('');
-    const [error, setError] = useState('');
+    const [imgSrc, setImgSrc] = useState("");
+    const [error, setError] = useState("");
     const [hasPermission, setPermission] = useState(null);
 
     const videoRef = useRef();
@@ -30,10 +30,10 @@ export default function CaptureSelfie({ handleSetImg }) {
                 .catch((err) => {
                     setError(() => {
                         if (
-                            err.message === 'The object can not be found here.' ||
-                            err.message === 'Invalid constraint'
+                            err.message === "The object can not be found here." ||
+                            err.message === "Invalid constraint"
                         ) {
-                            return 'No camera found';
+                            return "No camera found";
                         }
                         return err.message;
                     });
@@ -54,9 +54,7 @@ export default function CaptureSelfie({ handleSetImg }) {
     const getImage = async () => {
         const res = await fetch(imgSrc);
         const blob = await res.blob();
-        return new File([blob], `Capture_${new Date().toISOString()}`, {
-            type: 'image/png',
-        });
+        return new File([blob], `Capture_${new Date().toISOString()}`, { type: "image/png" });
     };
 
     const handleConfirm = async () => {
@@ -67,16 +65,16 @@ export default function CaptureSelfie({ handleSetImg }) {
     const handleRetake = (event) => {
         event.preventDefault();
         const canvas = canvasRef.current;
-        const context = canvas.getContext('2d');
-        context.fillStyle = '#AAA';
+        const context = canvas.getContext("2d");
+        context.fillStyle = "#AAA";
         context.fillRect(0, 0, canvas.width, canvas.height);
-        setImgSrc('');
+        setImgSrc("");
     };
 
     const handleCapture = (event) => {
         event.preventDefault();
         const canvas = canvasRef.current;
-        const context = canvas.getContext('2d');
+        const context = canvas.getContext("2d");
         const width = videoRef.current.videoWidth,
             height = videoRef.current.videoHeight;
         canvas.width = width;
@@ -84,7 +82,7 @@ export default function CaptureSelfie({ handleSetImg }) {
         console.log(width, height);
         context.drawImage(videoRef.current, 0, 0, width, height);
 
-        const data = canvas.toDataURL('image/png');
+        const data = canvas.toDataURL("image/png");
         setImgSrc(data);
         // handleDisableCamera()
     };
@@ -92,14 +90,14 @@ export default function CaptureSelfie({ handleSetImg }) {
     return (
         <div className={styles.videoContainer}>
             <video
-                width="inherit"
-                height="auto"
+                width='inherit'
+                height='auto'
                 ref={videoRef}
                 autoPlay
                 playsInline
-                style={{ display: imgSrc ? 'none' : 'block' }}
+                style={{ display: imgSrc ? "none" : "block" }}
             />
-            <div className={styles.captureContainer} style={{ justifyContent: imgSrc ? 'space-between' : 'center' }}>
+            <div className={styles.captureContainer} style={{ justifyContent: imgSrc ? "space-between" : "center" }}>
                 {imgSrc ? (
                     <>
                         <button onClick={handleRetake}>
@@ -115,12 +113,12 @@ export default function CaptureSelfie({ handleSetImg }) {
                     </button>
                 ) : (
                     <p className={styles.errorMsg}>
-                        {(error === 'Requested device not found' ? 'No media device found' : error) || ''}
+                        {(error === "Requested device not found" ? "No media device found" : error) || ""}
                     </p>
                 )}
             </div>
             <canvas ref={canvasRef} />
-            <img alt="selfie" src={imgSrc} style={{ display: imgSrc ? 'block' : 'none' }} />
+            <img alt='selfie' src={imgSrc} style={{ display: imgSrc ? "block" : "none" }} />
         </div>
     );
 }
