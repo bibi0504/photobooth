@@ -1,8 +1,8 @@
-import { useEffect } from "react"
-import styles from "./index.module.css"
+import { useEffect } from 'react';
+import styles from './index.module.css';
 
 export default function Modal({ open, onClose, children }) {
-  window.scrollTo({ top: 0, behavior: "smooth" })
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   // useEffect(() => {
   //   if (open) {
   //     document.body.style.overflow = "hidden"
@@ -16,6 +16,6 @@ export default function Modal({ open, onClose, children }) {
       <div className={styles.modalContent}>{children}</div>
     </>
   ) : (
-    ""
-  )
+    ''
+  );
 }

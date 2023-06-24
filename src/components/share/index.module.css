@@ -4,7 +4,7 @@
   padding: 6.97% 7.08%;
   display: flex;
   background: #111a1c;
-  background-image: url("./../../assets/icons/pattern.svg");
+  background-image: url('./../../assets/icons/pattern.svg');
   background-position-x: center;
 }
 
@@ -25,7 +25,7 @@
   border-radius: 12px;
   padding: 24px;
   cursor: pointer;
-  font-family: "Aeonik";
+  font-family: 'Aeonik';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -43,7 +43,7 @@
 
 .button p {
   color: #f028b8;
-  font-family: "Aeonik";
+  font-family: 'Aeonik';
   font-weight: bold;
   font-size: 18px;
 }
@@ -222,7 +222,7 @@
   align-items: center;
   background: #f028b8;
   border-radius: 50px;
-  font-family: "Aeonik";
+  font-family: 'Aeonik';
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -247,7 +247,7 @@
 
 .pattern path {
   stroke: #96c6cc;
-  strokeWidth: 2px;
+  strokewidth: 2px;
 }
 
 .pattern {
