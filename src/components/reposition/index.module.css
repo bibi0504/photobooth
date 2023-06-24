@@ -1,214 +1,214 @@
 .container {
-  width: 100%;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
 }
 
 .avatarContainer {
-  width: 280px;
-  height: 337px;
-  border-radius: 146px;
-  background: #f028b8;
+    width: 280px;
+    height: 337px;
+    border-radius: 146px;
+    background: #f028b8;
 
-  /* @media only screen and (max-width: 900px) and (orientation: portrait) {
+    /* @media only screen and (max-width: 900px) and (orientation: portrait) {
     width: 250px;
     height: 336px;
   } */
 }
 
 .avatar {
-  width: 280px !important;
-  height: auto !important;
-  object-fit: contain;
-  border-radius: 146px !important;
-  cursor: default !important;
+    width: 280px !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 146px !important;
+    cursor: default !important;
 
-  /* @media only screen and (max-width: 900px) and (orientation: portrait) {
+    /* @media only screen and (max-width: 900px) and (orientation: portrait) {
     width: 230px !important;
     height: 316px !important;
   } */
 }
 
 .firstRow {
-  display: flex;
-  width: 100%;
-  height: 80%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 
-  /* @media only screen and (max-width: 900px) and (orientation: portrait) {
+    /* @media only screen and (max-width: 900px) and (orientation: portrait) {
     flex-direction: column;
   } */
 }
 
 .imageContainer {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .controlsContainer {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 80%;
-  justify-content: space-between;
-  align-items: end;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    justify-content: space-between;
+    align-items: end;
 
-  /* @media only screen and (max-width: 900px) and (orientation: portrait) {
+    /* @media only screen and (max-width: 900px) and (orientation: portrait) {
     align-items: center;
     width: 100%;
   } */
 }
 
 .secondRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .positionButton {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
 .arrowBackground {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background: #f0aedd;
-  border: 2px solid #f028b8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #f0aedd;
+    border: 2px solid #f028b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .transitionButton {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sliderContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
 }
 
 .slider {
-  -webkit-appearance: none;
-  width: 80%;
-  height: 3px;
-  background: #f028b8;
-  outline: none;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
+    -webkit-appearance: none;
+    width: 80%;
+    height: 3px;
+    background: #f028b8;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
 }
 
 .slider:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #f028b8;
-  cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f028b8;
+    cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #04aa6d;
-  cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: #04aa6d;
+    cursor: pointer;
 }
 .retakeSelfie {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 20px;
-  width: 160px;
-  height: 50px;
-  background: white;
-  border-radius: 8px;
-  border: 2px solid #f028b8;
-  outline: 0;
-  gap: 8px;
-  cursor: pointer;
-  font-family: Aeonik;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  color: #f028b8;
-  margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    width: 160px;
+    height: 50px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #f028b8;
+    outline: 0;
+    gap: 8px;
+    cursor: pointer;
+    font-family: Aeonik;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: #f028b8;
+    margin-top: 60px;
 }
 .continue {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 20px;
-  width: 160px;
-  height: 50px;
-  background: #f028b8;
-  border-radius: 8px;
-  outline: 0;
-  gap: 8px;
-  cursor: pointer;
-  border: none;
-  font-family: Aeonik;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin: 60px 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    width: 160px;
+    height: 50px;
+    background: #f028b8;
+    border-radius: 8px;
+    outline: 0;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    font-family: Aeonik;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin: 60px 0 0 40px;
 }
 
 .sliderContainer svg {
-  cursor: pointer;
-  width: 20px;
-  margin: 5px;
-  height: auto;
+    cursor: pointer;
+    width: 20px;
+    margin: 5px;
+    height: auto;
 }
 
 @media only screen and (max-width: 900px) and (orientation: portrait) {
-  .avatarContainer {
-    width: 250px;
-    height: 300px;
-  }
+    .avatarContainer {
+        width: 250px;
+        height: 300px;
+    }
 
-  .avatar {
-    width: 250px !important;
-    height: auto !important;
-  }
+    .avatar {
+        width: 250px !important;
+        height: auto !important;
+    }
 
-  .firstRow {
-    flex-direction: column;
-  }
+    .firstRow {
+        flex-direction: column;
+    }
 
-  .controlsContainer {
-    align-items: center;
-    width: 100%;
-    padding: 30px 0;
-  }
+    .controlsContainer {
+        align-items: center;
+        width: 100%;
+        padding: 30px 0;
+    }
 
-  .retakeSelfie {
-    margin-top: 20px;
-  }
+    .retakeSelfie {
+        margin-top: 20px;
+    }
 
-  .continue {
-    margin-top: 20px;
-  }
-  /* .imageContainer {
+    .continue {
+        margin-top: 20px;
+    }
+    /* .imageContainer {
     height: 25vh;
     width: 50vw;
   } */
