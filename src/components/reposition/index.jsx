@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 import {
   LeftArrow,
   LeftArrowIcon,
@@ -10,47 +10,47 @@ import {
   RightArrowIcon,
   RotateLeftIcon,
   RotateRightIcon,
-} from "../../assets/icons"
-import styles from "./index.module.css"
-import AvatarEditor from "react-avatar-editor"
+} from "../../assets/icons";
+import styles from "./index.module.css";
+import AvatarEditor from "react-avatar-editor";
 
 export default function Reposition({ outputImg, callBack, fileName }) {
-  const [zoomValue, setZoomValue] = useState(1)
-  const [rotateValue, setRotateValue] = useState(0)
-  const [imgPosition, setImagePosition] = useState({ x: 0.5, y: 0.5 })
-  const [imgString, setImgString] = useState("")
-  const editorRef = useRef(null)
+  const [zoomValue, setZoomValue] = useState(1);
+  const [rotateValue, setRotateValue] = useState(0);
+  const [imgPosition, setImagePosition] = useState({ x: 0.5, y: 0.5 });
+  const [imgString, setImgString] = useState("");
+  const editorRef = useRef(null);
 
   const handleZoomIn = () => {
     if (zoomValue < 2) {
       setZoomValue((prevState) => {
-        return prevState + 0.1
-      })
+        return prevState + 0.1;
+      });
     }
-  }
+  };
   const handleZoomOut = () => {
     if (zoomValue > 1) {
       setZoomValue((prevState) => {
-        return prevState - 0.1
-      })
+        return prevState - 0.1;
+      });
     }
-  }
+  };
   const handleRotateRight = () => {
     if (rotateValue < 180) {
       setRotateValue((prevState) => {
-        if (prevState + 18 > 180) return 180
-        else return prevState + 18
-      })
+        if (prevState + 18 > 180) return 180;
+        else return prevState + 18;
+      });
     }
-  }
+  };
   const handleRotateLeft = () => {
     if (rotateValue > -180) {
       setRotateValue((prevState) => {
-        if (prevState - 18 < -180) return -180
-        else return prevState - 18
-      })
+        if (prevState - 18 < -180) return -180;
+        else return prevState - 18;
+      });
     }
-  }
+  };
 
   const handleUpButton = () => {
     if (imgPosition.y < 0.9) {
@@ -58,40 +58,40 @@ export default function Reposition({ outputImg, callBack, fileName }) {
         return {
           x: prevState.x,
           y: prevState.y + 0.1,
-        }
-      })
+        };
+      });
     }
-  }
+  };
   const handleDownButton = () => {
     if (imgPosition.y > 0.2) {
       setImagePosition((prevState) => {
         return {
           x: prevState.x,
           y: prevState.y - 0.1,
-        }
-      })
+        };
+      });
     }
-  }
+  };
   const handleLeftButton = () => {
     if (imgPosition.x < 0.9) {
       setImagePosition((prevState) => {
         return {
           x: prevState.x + 0.1,
           y: prevState.y,
-        }
-      })
+        };
+      });
     }
-  }
+  };
   const handleRightButton = () => {
     if (imgPosition.x > 0.2) {
       setImagePosition((prevState) => {
         return {
           x: prevState.x - 0.1,
           y: prevState.y,
-        }
-      })
+        };
+      });
     }
-  }
+  };
 
   const loadImage = (url) =>
     fetch(url, { headers: { "Access-Control-Allow-Origin": "*" } })
@@ -99,23 +99,23 @@ export default function Reposition({ outputImg, callBack, fileName }) {
       .then(
         (blob) =>
           new Promise((resolve, reject) => {
-            console.log(blob)
-            const reader = new FileReader()
-            reader.onloadend = () => resolve(reader.result)
-            reader.onerror = reject
-            reader.readAsDataURL(blob)
-          }),
+            console.log(blob);
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result);
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+          })
       )
-      .catch((ex) => console.log(ex))
+      .catch((ex) => console.log(ex));
 
   const handleContinue = async () => {
     if (editorRef) {
-      const dataUrl = editorRef.current.getImage().toDataURL()
-      const result = await fetch(dataUrl)
-      const blob = await result.blob()
-      callBack(URL.createObjectURL(blob))
+      const dataUrl = editorRef.current.getImage().toDataURL();
+      const result = await fetch(dataUrl);
+      const blob = await result.blob();
+      callBack(URL.createObjectURL(blob));
     }
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -126,7 +126,7 @@ export default function Reposition({ outputImg, callBack, fileName }) {
               ref={editorRef}
               image={outputImg || ""}
               className={styles.avatar}
-              crossOrigin='*'
+              crossOrigin="*"
               border={0}
               scale={zoomValue}
               rotate={rotateValue}
@@ -151,27 +151,45 @@ export default function Reposition({ outputImg, callBack, fileName }) {
                 <PositionUpArrow />
               </div>
             </div>
-            <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-              <div className={styles.arrowBackground} onClick={handleLeftButton}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                className={styles.arrowBackground}
+                onClick={handleLeftButton}
+              >
                 <LeftArrow />
               </div>
-              <div className={styles.arrowBackground} onClick={handleDownButton}>
+              <div
+                className={styles.arrowBackground}
+                onClick={handleDownButton}
+              >
                 <PostionDownArrow />
               </div>
-              <div className={styles.arrowBackground} onClick={handleRightButton}>
+              <div
+                className={styles.arrowBackground}
+                onClick={handleRightButton}
+              >
                 <RightArrow />
               </div>
             </div>
           </div>
           <div className={styles.transitionButton}>
             <div className={styles.sliderContainer}>
-              <MinusIcon onClick={handleZoomOut} style={{ cursor: "pointer" }} />
+              <MinusIcon
+                onClick={handleZoomOut}
+                style={{ cursor: "pointer" }}
+              />
               <input
-                type='range'
-                min='1'
-                max='2'
+                type="range"
+                min="1"
+                max="2"
                 className={styles.slider}
-                id='zoom'
+                id="zoom"
                 step={0.1}
                 value={zoomValue}
                 onChange={(e) => setZoomValue(e.target.valueAsNumber)}
@@ -179,19 +197,25 @@ export default function Reposition({ outputImg, callBack, fileName }) {
               <PlusIcon onClick={handleZoomIn} style={{ cursor: "pointer" }} />
             </div>
             <div className={styles.sliderContainer}>
-              <RotateLeftIcon onClick={handleRotateLeft} style={{ cursor: "pointer" }} />
+              <RotateLeftIcon
+                onClick={handleRotateLeft}
+                style={{ cursor: "pointer" }}
+              />
               <input
-                type='range'
-                min='-180'
-                max='180'
+                type="range"
+                min="-180"
+                max="180"
                 className={styles.slider}
-                id='rotate'
+                id="rotate"
                 value={rotateValue}
                 onChange={(e) => {
-                  setRotateValue(e.target.valueAsNumber)
+                  setRotateValue(e.target.valueAsNumber);
                 }}
               />
-              <RotateRightIcon onClick={handleRotateRight} style={{ cursor: "pointer" }} />
+              <RotateRightIcon
+                onClick={handleRotateRight}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           </div>
         </div>
@@ -200,7 +224,7 @@ export default function Reposition({ outputImg, callBack, fileName }) {
         <button
           className={styles.retakeSelfie}
           onClick={() => {
-            callBack(null)
+            callBack(null);
           }}
         >
           <LeftArrowIcon /> Retake Selfie
@@ -210,5 +234,5 @@ export default function Reposition({ outputImg, callBack, fileName }) {
         </button>
       </div>
     </div>
-  )
+  );
 }

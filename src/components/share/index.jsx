@@ -1,10 +1,17 @@
-import { DownArrowIcon, LeftArrowIcon } from "../../assets/icons"
-import styles from "./index.module.css"
+import { DownArrowIcon, LeftArrowIcon } from "../../assets/icons";
+import styles from "./index.module.css";
 
-export default function Share({ handleDownload, handleCreateAnother, imgKey = "" }) {
+export default function Share({
+  handleDownload,
+  handleCreateAnother,
+  imgKey = "",
+}) {
   return (
     <div className={styles.container}>
-      <h2 className={styles.headText}>Congrats on your<br/> new meme!</h2>
+      <h2 className={styles.headText}>
+        Congrats on your
+        <br /> new meme!
+      </h2>
       <div className={styles.textContainer}>
         <p>
           Now, it’s time to download it and share it on the <br />
@@ -24,5 +31,5 @@ export default function Share({ handleDownload, handleCreateAnother, imgKey = ""
         </button>
       </div>
     </div>
-  )
+  );
 }

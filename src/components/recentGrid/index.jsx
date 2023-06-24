@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 export default function Recent({ images = [] }) {
   return images.length ? (
@@ -9,5 +9,5 @@ export default function Recent({ images = [] }) {
     </div>
   ) : (
     ""
-  )
+  );
 }

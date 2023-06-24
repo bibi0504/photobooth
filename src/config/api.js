@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: "https://1bkchtc9oh.execute-api.us-east-1.amazonaws.com/dev/",
@@ -6,4 +6,4 @@ export const axiosInstance = axios.create({
     Accept: "application/json",
     "Content-Type": "*",
   },
-})
+});
