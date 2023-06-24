@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" width="32" height="32">
+  <path d="M16.005 0C24.838 0 32.01 7.162 32.01 16.005c0 8.833-7.162 16.005-16.005 16.005C7.172 32.01 0 24.847 0 16.005 0 7.172 7.162 0 16.005 0zm1.786 10.724h2.986V7.143h-2.986a4.179 4.179 0 0 0-4.176 4.176v1.786h-2.391v3.581h2.391v9.543h3.581v-9.543h2.986l.595-3.581h-3.581v-1.786c0-.326.269-.595.595-.595z" fill="#fff"/>
+</svg>

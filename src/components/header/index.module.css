@@ -1,0 +1,20 @@
+.headerContainer {
+  min-width: calc(100% - 120px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 250px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 900px) {
+  .headerContainer {
+    min-width: unset;
+    margin-bottom: 20px;
+  }
+}
