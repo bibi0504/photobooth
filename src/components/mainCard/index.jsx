@@ -561,7 +561,7 @@ export default function MainCard({ color, img, persona }) {
           <rect x="488" y="81" rx="240" ry="240" width="481px" height="579px" />
         </clipPath>
       </defs>
-      <g clippth="url(#circle-clip)">
+      <g clipPath="url(#circle-clip)">
         <image id="image0_2521_21889" width="481px" height="579px" x={488} y={81} xlinkHref={img} />
       </g>
     </svg>

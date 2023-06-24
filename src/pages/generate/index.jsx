@@ -16,9 +16,10 @@ import Compressor from 'compressorjs';
 import Recent from '../../components/recentGrid';
 import Header from '../../components/header';
 import MainCard from '../../components/mainCard';
+import profileImage from '../../assets/images/personIcon.png';
 
 const defaultColor = { color: '#f028b8', isBlack: false };
-const defaultImage = null;
+const defaultImage = profileImage;
 const defaultPersona = { persona: 'Impactful Innovator', subText: 'De-risky business' };
 
 export default function Generate() {
@@ -149,21 +150,13 @@ export default function Generate() {
 
   const handleClearStep = () => {
     changeStep(1);
-    setRepositionedImage(null);
+    setRepositionedImage(defaultImage);
     setColor(defaultColor);
     setImage({});
     setPersona(defaultPersona);
     setIsDownload(false);
     setRecent([]);
   };
-
-  useEffect(() => {
-    if (color.color) {
-      getImage();
-    }
-  }, [color]);
-
-  console.log(color, repositionedImage, persona);
 
   return (
     <>
@@ -248,6 +241,7 @@ export default function Generate() {
                 setColor(value);
                 setIsDownload(true);
                 setModalOpen(false);
+                getImage();
               }}
             />
           ) : (
