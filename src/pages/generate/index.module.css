@@ -80,36 +80,6 @@ cardTitle :global(.cls-1) {
     margin-top: auto;
 }
 
-.rect {
-    width: 45%;
-    height: 54%;
-    background: #f028b8;
-    border-radius: 180px;
-    position: absolute;
-    right: 7.56%;
-    top: 7.56%;
-    background-image: url(../../assets/icons/personIcon.svg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.repositionedImageContainer {
-    position: absolute;
-    right: 7.56%;
-    top: 7.56%;
-    width: 45%;
-    height: 54%;
-    border-radius: 180px;
-}
-
-.repositionedImage {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 180px;
-}
 .mainContainer {
     display: flex;
     justify-content: space-around;
@@ -122,10 +92,6 @@ cardTitle :global(.cls-1) {
     align-self: flex-start;
     column-gap: 92px;
     row-gap: 30px;
-}
-
-.cardContainer {
-    border-radius: 8px;
 }
 
 .leftContainer {
@@ -192,70 +158,11 @@ cardTitle :global(.cls-1) {
     stroke-width: 2px;
 }
 
-.cardTitle {
-    width: 184px;
-    height: auto;
-    position: absolute;
-    top: 10%;
-    left: 7.08%;
-}
-
-.cardTitle svg {
-    width: inherit !important;
-    height: auto !important;
-}
-
-.footerText {
-    position: absolute;
-    bottom: 4.37%;
-    right: 4.7%;
-    color: black;
-    text-align: right;
-    font-family: Aeonik;
-    font-weight: 500;
-    font-size: 1em;
-    line-height: 110%;
-}
-
 .selfieCard :global(.logo) {
     width: 9.68vw;
     position: absolute;
     top: 6.97%;
     left: 7.08%;
-}
-
-.sticker {
-    height: 28.6%;
-    /* height: 150px; */
-    width: auto;
-    z-index: 1;
-}
-.sticker path {
-    fill: black;
-}
-
-.persona {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f020b6;
-    border-radius: 50px;
-    font-family: 'Aeonik';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    z-index: 1;
-    margin-bottom: 4.4%;
-    /* margin-bottom: 23px; */
-    /* padding: 8px 22px; */
-    padding: 1.5% 4%;
-}
-
-.sticker:global(.black) path {
-    fill: #fff;
 }
 
 .desc {

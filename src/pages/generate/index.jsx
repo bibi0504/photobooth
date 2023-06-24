@@ -1,24 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import styles from './index.module.css';
-import {
-    LogoWhite,
-    RightArrowIcon,
-    LogoPink,
-    Pattern2,
-    Pattern3,
-    CrossIcon,
-    Empowered1,
-    Empowered2,
-    Empowered3,
-    Impactful1,
-    Impactful2,
-    Impactful3,
-    Galvanized1,
-    Galvanized2,
-    Galvanized3,
-} from '../../assets/icons';
-import CardPattern from '../../assets/icons/cardPattern.svg';
+import { LogoWhite, RightArrowIcon, CrossIcon } from '../../assets/icons';
 import Modal from '../../components/modal';
 import UploadSelfie from '../../components/uploadSelfie';
 import PickPersona from '../../components/pickPersona';
@@ -32,18 +15,7 @@ import { toast } from 'react-toastify';
 import Compressor from 'compressorjs';
 import Recent from '../../components/recentGrid';
 import Header from '../../components/header';
-
-const personaSticker = {
-    'Don’t quote me on this': Empowered2,
-    'Dude, where’s my COI?': Empowered1,
-    'Friends with benefits': Empowered3,
-    'What can AI do for you?': Impactful1,
-    'De-risky business': Impactful3,
-    'Fax intolerant': Impactful2,
-    'From ABC to IPO': Galvanized1,
-    'Shop local, go public': Galvanized2,
-    'Grow forth': Galvanized3,
-};
+import MainCard from '../../components/mainCard';
 
 export default function Generate() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -192,31 +164,11 @@ export default function Generate() {
         setRecent([]);
     };
 
-    const Sticker = () => {
-        if (persona?.subText) {
-            const PersonaText = personaSticker[persona?.subText];
-            return <PersonaText className={styles.sticker + (color.isBlack ? ' black' : ' white')} />;
-        }
-        return <Impactful3 className={styles.sticker + (color.isBlack ? ' black' : ' white')} />;
-    };
-
     useEffect(() => {
         if (color.color) {
             getImage();
         }
     }, [color]);
-
-    const getBackgroundAndTextColor = () => {
-        return color?.color
-            ? {
-                  backgroundColor: color.color,
-                  color: color.color === '#f028b8' ? 'white' : '#152023',
-              }
-            : {
-                  backgroundColor: '#f028b8',
-                  color: 'white',
-              };
-    };
 
     return (
         <>
@@ -225,46 +177,7 @@ export default function Generate() {
                 <div className={styles.mainContainer}>
                     <div className={styles.mainContent}>
                         <div className={styles.leftContainer}>
-                            <div className={styles.selfieCard} ref={cardRef}>
-                                <div
-                                    style={{
-                                        background: `${color.isBlack ? '#000' : '#fff'} url(${CardPattern})`,
-                                        borderColor: color.color || '#f028b8',
-                                    }}
-                                    className={styles.cardContainer}
-                                >
-                                    <div className={styles.cardTitle}>
-                                        <LogoPink />
-                                    </div>
-                                    {/* <div className={styles.pattern}>
-                                        <Pattern2 />
-                                    </div>
-                                    <div className={styles.patternBottom}>
-                                        <Pattern3 />
-                                    </div> */}
-                                    {repositionedImage ? (
-                                        <div
-                                            className={styles.repositionedImageContainer}
-                                            style={{ background: color.color || '#f028b8' }}
-                                        >
-                                            <img src={repositionedImage} alt="" className={styles.repositionedImage} />
-                                        </div>
-                                    ) : (
-                                        <div className={styles.rect} />
-                                    )}
-                                    <div className={styles.persona} style={getBackgroundAndTextColor()}>
-                                        {persona?.persona || 'IMPACTFUL INNOVATOR'}
-                                    </div>
-                                    <Sticker />
-                                    <div
-                                        className={styles.footerText}
-                                        style={{ color: color.isBlack ? '#fff' : '#121212' }}
-                                    >
-                                        <p>New brand,</p>
-                                        <p>same sense of humor</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className={styles.selfieCard} ref={cardRef}></div>
                         </div>
                         {isDownload ? (
                             <div className={styles.rightContainer}>
